@@ -5,7 +5,7 @@ public class Homework1 {
 //        ex1();
 //        ex2();
         ex3();
-//        ex4();
+        ex4();
     }
 
     public static void ex1() {
@@ -63,7 +63,7 @@ public class Homework1 {
         //Заменить в строке все 'this is' на 'those are', получить индекс (число) второй буквы 'o' в строке
         //Распечатать полученный индекс
         String simply = "this is simply. This is my favorite song.";
-        simply = simply.replace("this is","those are");
+        simply = simply.replaceAll("(?i)this is", "those are");
         int secondIndex = simply.indexOf('o', simply.indexOf('o') + 1);
         System.out.println(secondIndex);
     }
