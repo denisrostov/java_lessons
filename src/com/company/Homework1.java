@@ -2,8 +2,8 @@ package com.company;
 
 public class Homework1 {
     public static void main(String[] args) {
-//        ex1();
-//        ex2();
+        ex1();
+        ex2();
         ex3();
         ex4();
     }
@@ -105,5 +105,59 @@ public class Homework1 {
         //Колбасы 2000кг
         //Ветчины 8511кг
         //Шейки 6988кг
+        int sausageWeight = 2000;
+        int hamWeight = 8511;
+        int baconWeight = 6988;
+
+        int costOfSausageRub = 800;
+        int costOfHamRub = 350;
+        int costOfBaconRub = 500;
+
+        double sausageIncome = sausageWeight * costOfSausageRub;
+        double sausageNetCost = sausageWeight * getSausageNetCost(sausageWeight);
+
+        double hamIncome = hamWeight * costOfHamRub;
+        double hamNetCost = hamWeight * 275;
+
+        double baconIncome = baconWeight * costOfBaconRub;
+        double baconNetCost = baconWeight * getBaconNetCost(baconWeight);
+
+        double revenue  = sausageIncome + hamIncome + baconIncome;
+        double cost  = sausageNetCost + hamNetCost + baconNetCost + 1_000_000;
+
+        double profitBeforeTax = revenue - cost;
+
+        double tax;
+        if (profitBeforeTax > 2_000_000) {
+            tax = 0.13 * (profitBeforeTax - 1_000_000) + 0.10 * 1_000_000 + 0.08 * 1_000_000;
+        } else if (profitBeforeTax > 1_000_000) {
+            tax = 0.10 * (profitBeforeTax - 1_000_000) + 0.08 * 1_000_000;
+        } else {
+            tax = 0.08 * profitBeforeTax;
+        }
+
+        double profitAfterTax = profitBeforeTax - tax;
+
+        System.out.println("Прибыль после налогов: " + profitAfterTax);
+    }
+
+    public static double getBaconNetCost(int kg) {
+        if (kg < 500) {
+            return 311;
+        }
+        return 299;
+    }
+
+    public static double getSausageNetCost(int kg) {
+        if (kg < 1000) {
+            return 412;
+        }
+        if ( kg < 2000) {
+            return 408;
+        }
+        if (kg >= 2000) {
+            return 404;
+        }
+        return 0;
     }
 }
