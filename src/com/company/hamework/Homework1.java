@@ -1,4 +1,4 @@
-package com.company;
+package com.company.hamework;
 
 public class Homework1 {
     public static void main(String[] args) {
@@ -122,8 +122,8 @@ public class Homework1 {
         double baconIncome = baconWeight * costOfBaconRub;
         double baconNetCost = baconWeight * getBaconNetCost(baconWeight);
 
-        double revenue  = sausageIncome + hamIncome + baconIncome;
-        double cost  = sausageNetCost + hamNetCost + baconNetCost + 1_000_000;
+        double revenue = sausageIncome + hamIncome + baconIncome;
+        double cost = sausageNetCost + hamNetCost + baconNetCost + 1_000_000;
 
         double profitBeforeTax = revenue - cost;
 
@@ -152,7 +152,7 @@ public class Homework1 {
         if (kg < 1000) {
             return 412;
         }
-        if ( kg < 2000) {
+        if (kg < 2000) {
             return 408;
         }
         if (kg >= 2000) {
