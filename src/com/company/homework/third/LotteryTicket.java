@@ -1,4 +1,4 @@
-package com.company.hamework.third;
+package com.company.homework.third;
 
 public class LotteryTicket {
     private static int counter = 1;
