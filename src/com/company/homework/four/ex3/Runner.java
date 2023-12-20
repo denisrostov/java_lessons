@@ -13,7 +13,5 @@ public class Runner {
         for (SoundProducer soundProducer : soundProducers) {
             System.out.println(soundProducer.makeSound());
         }
-
-
     }
 }
