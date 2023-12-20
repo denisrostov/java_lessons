@@ -4,8 +4,8 @@ public class Bus extends Vehicle {
 
     private int maxPassengers;
 
-    public Bus(boolean isDirty, double width, double height, double length, int maxPassengers) {
-        super(isDirty, width, height, length);
+    public Bus(boolean isDirty, double length, double height, double width, int maxPassengers) {
+        super(isDirty, length, height, width);
         this.maxPassengers = maxPassengers;
     }
 }

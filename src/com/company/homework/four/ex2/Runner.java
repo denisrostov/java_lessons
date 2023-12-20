@@ -13,7 +13,7 @@ public class Runner {
             try {
                 flyable.fly();
             } catch (FlyException e) {
-                e.printStackTrace();
+                System.out.println("Ошибка: " + e.getMessage());
             }
         }
     }
