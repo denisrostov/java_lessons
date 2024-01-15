@@ -4,7 +4,7 @@ public class Homework1 {
     public static void main(String[] args) {
         ex1();
         ex2();
-        ex3();
+//        ex3();
 //        ex4();
     }
 
